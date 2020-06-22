@@ -8,14 +8,12 @@ Each article has it's correspondent folder with the source code to follow the tu
 To get the source files you have to clone the repository, like this:
 
 ```shell
-git clone https://github.com/opensas/mdn-svelte-todo.git
+git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-> Note: If you just want to download the files without cloning the git repo, you can use the [degit](https://github.com/Rich-Harris/degit) tool like this `npx degit opensas/mdn-svelte-todo`. You can also download a specific folder with `npx degit opensas/mdn-svelte-todo/01-getting-started`.
+> Note: If you just want to download the files without cloning the git repo, you can use the [degit](https://github.com/Rich-Harris/degit) tool like this `npx degit opensas/mdn-svelte-tutorial`. You can also download a specific folder with `npx degit opensas/mdn-svelte-tutorial/01-getting-started`.
 
-Then to get the app running, cd into the article's folder, install dependencies and start the app in development mode, like this:
-
-mode for each article just run the following:
+Then to get the app running, cd into the article's folder, and run the following commands:
 
 ```
 cd 01-getting-started
