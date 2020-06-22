@@ -1,15 +1,14 @@
+# Source code for Svelte Tutorials at MDN Web docs
 
-# mdn-svelte-todo: 01-getting-started
+Source code of the To-Do list app for the Svelte tutorials at [Understanding client-side JavaScript frameworks](Understanding client-side JavaScript frameworks) series at MDN Web docs.
 
-Source code of the To-Do list app for the Svelte tutorial at MDN Web docs
-
-## Getting started with Svelte
+## 01. Getting started with Svelte
 
 In this article we'll provide a quick introduction to Svelte. We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run the project locally and build it for production.
 
 You can see the complete content of this article [here](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started).
 
-You can also play with an online version of this app in this Svelte [REPL](https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2).
+The source code is in the `01-getting-started` folder, you can also play with an online version this Svelte [REPL](https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2).
 
 ---
 

@@ -1,15 +1,14 @@
+# Source code for Svelte Tutorials at MDN Web docs
 
-# mdn-svelte-todo: 03-adding-dynamic-behavior
+Source code of the To-Do list app for the Svelte tutorials at [Understanding client-side JavaScript frameworks](Understanding client-side JavaScript frameworks) series at MDN Web docs.
 
-Source code of the To-Do list app for the Svelte tutorial at MDN Web docs
-
-# Adding dynamic behavior: working with variables and props
+## 03. Adding dynamic behavior: working with variables and props
 
 Now that we have our markup and styles ready we can start developing the required features for our To-Do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete todos, and mark them as complete. 
 
 You can see the complete content of this article [here](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_adding_dynamic_behavior).
 
-You can also play with an online version of this app in this Svelte [REPL](https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2).
+The source code is in the `03-adding-dynamic-behavior` folder, you can also play with an online version this Svelte [REPL](https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2).
 
 ---
 
