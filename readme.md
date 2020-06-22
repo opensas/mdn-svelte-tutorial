@@ -53,3 +53,12 @@ In the last article we started developing our Todo list app. Now it's time to go
 You can see the complete content of this article [here](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_componentizing-our-app).
 
 The source code is in the `04-componentizing-our-app` folder, you can also play with an online version this Svelte [REPL](https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2).
+
+## 05. Componentizing our Svelte app
+
+In the last article we added more features to our To-Do list and started to organize our app into components. In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. Then we will focus on some accessibility issues involving focus management. Finally, we will see how components can also expose methods and variables to access them programmatically.
+
+You can see the complete content of this article [here](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_advanced-concepts).
+
+The source code is in the `05-advanced-concepts` folder, you can also play with an online version this Svelte [REPL](https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2).
+
