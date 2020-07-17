@@ -1,10 +1,14 @@
 <!-- components/TodosStatus.svelte -->
+<script context='module' lang='ts'>
+  export type TodosStatusType =  SvelteComponent & { focus(): void }
+</script>
+
 <script lang='ts'>
-  import { TodoEntity } from "../interfaces/todo.interface";
+  import type { TodoType } from "../types/todo.type";
 
-  export let todos: TodoEntity[]
+  export let todos: TodoType[]
 
-  import { Focusable } from "../interfaces/focusable.interface";
+  import type { HTMLControl } from "../types/html-control.type";
 
   let totalTodos: number
   let completedTodos: number
@@ -12,7 +16,7 @@
   $: totalTodos = todos.length
   $: completedTodos = todos.filter(todo => todo.completed).length
 
-  let headingEl: Focusable
+  let headingEl: HTMLControl
 
   export const focus = () => headingEl.focus()
 

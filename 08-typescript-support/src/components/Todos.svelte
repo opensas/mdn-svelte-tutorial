@@ -5,15 +5,16 @@
   import MoreActions from './MoreActions.svelte'
   import NewTodo from './NewTodo.svelte'
   import TodosStatus from './TodosStatus.svelte'
+  import type { TodosStatusType } from './TodosStatus.svelte'
   import { alert } from '../stores'
 
-  import { TodoEntity } from '../interfaces/todo.interface'
+  import type { TodoType } from '../types/todo.type'
 
-  import { Filter } from '../interfaces/filter.interface';
+  import { Filter } from '../types/filter.interface';
 
-  export let todos: TodoEntity[] = []
+  export let todos: TodoType[] = []
 
-  let todosStatus                   // reference to TodosStatus instance
+  let todosStatus: TodosStatusType                   // reference to TodosStatus instance
 
   let newTodoId: number
   $: newTodoId = todos.length > 0 ? Math.max(...todos.map(t => t.id)) + 1 : 1
@@ -24,14 +25,14 @@
     $alert = `Todo '${name}' has been added`
   }
 
-  function removeTodo(e: CustomEvent<TodoEntity>) {
+  function removeTodo(e: CustomEvent<TodoType>) {
     const { detail: todo } = e
     todos = todos.filter(t => t.id !== todo.id)
     todosStatus.focus()             // give focus to status heading
     $alert = `Todo '${todo.name}' has been deleted`
   }
 
-  function updateTodo(e: CustomEvent<TodoEntity>) {
+  function updateTodo(e: CustomEvent<TodoType>) {
     const { detail: todo } = e
     const i = todos.findIndex(t => t.id === todo.id)
     if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
@@ -40,7 +41,7 @@
   }
 
   let filter: Filter = Filter.ALL
-  const filterTodos = (filter: Filter, todos: TodoEntity[]) => 
+  const filterTodos = (filter: Filter, todos: TodoType[]) => 
     filter === Filter.ACTIVE ? todos.filter(t => !t.completed) :
     filter === Filter.COMPLETED ? todos.filter(t => t.completed) : 
     todos

@@ -5,12 +5,12 @@
 
   import { selectOnFocus } from '../actions'
 
-  import { Focusable } from '../interfaces/focusable.interface'
+  import type { HTMLControl } from '../types/html-control.type'
 
   export let autofocus = false
 
   let name = ''
-  let nameEl: Focusable                  // reference to the name input DOM node
+  let nameEl: HTMLControl                  // reference to the name input DOM node
 
   const addTodo = () => {
     dispatch('addTodo', name)

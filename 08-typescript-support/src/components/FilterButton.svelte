@@ -1,7 +1,7 @@
 <!-- components/FilterButton.svelte -->
 <script lang="ts">
 
-  import { Filter } from '../interfaces/filter.interface'
+  import { Filter } from '../types/filter.interface'
 
   export let filter: Filter = Filter.ALL
 </script>
