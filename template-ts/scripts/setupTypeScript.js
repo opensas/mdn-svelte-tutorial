@@ -96,9 +96,9 @@ fs.writeFileSync(tsconfigPath, tsconfig)
 // Delete this script, but not during testing
 if (!argv[2]) {
   // Remove the script
-  fs.unlinkSync(path.join(__filename))
+  // fs.unlinkSync(path.join(__filename)) // just in case, keep the file too
   // Remove the scripts folder
-  fs.rmdirSync(path.join(__dirname))
+  // fs.rmdirSync(path.join(__dirname))     // just in case, keep the folder, there might be others scripts present
 }
 
 // Adds the extension recommendation
