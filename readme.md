@@ -28,7 +28,7 @@ In this article we'll provide a quick introduction to Svelte. We will see how Sv
 
 You can see the complete content of this article [here](./01-getting-started/Svelte_getting_started.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started).
 
-The source code to follow this article is in the `01-getting-started` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/01-getting-started svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2).
+The source code to follow this article is in the `01-getting-started` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/01-getting-started svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2).
 
 ## 02. Starting our To-Do list app
 
@@ -36,7 +36,7 @@ In this section we will first have a look at the desired functionality of our ap
 
 You can see the complete content of this article [here](./02-starting-our-todo-app/Svelte_starting_our_todo_app.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_starting_our_todo_app).
 
-The source code to follow this article is in the `02-starting-our-todo-app` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2).
+The source code to follow this article is in the `02-starting-our-todo-app` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2).
 
 ## 03. Adding dynamic behavior: working with variables and props
 
@@ -44,7 +44,7 @@ Now that we have our markup and styles ready we can start developing the require
 
 You can see the complete content of this article [here](./03-adding-dynamic-behavior/Svelte_adding_dynamic_behavior.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_adding_dynamic_behavior).
 
-The source code to follow this article is in the `03-adding-dynamic-behavior` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2).
+The source code to follow this article is in the `03-adding-dynamic-behavior` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2).
 
 ## 04. Componentizing our Svelte app
 
@@ -52,7 +52,7 @@ In the last article we started developing our Todo list app. Now it's time to go
 
 You can see the complete content of this article [here](./04-componentizing-our-app/Svelte_componentizing_our_app.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_componentizing-our-app).
 
-The source code to follow this article is in the `04-componentizing-our-app` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2).
+The source code to follow this article is in the `04-componentizing-our-app` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2).
 
 ## 05. Svelte advanced concepts
 
@@ -60,7 +60,7 @@ In the last article we added more features to our To-Do list and started to orga
 
 You can see the complete content of this article [here](./05-advanced-concepts/Svelte_advanced_concepts.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_advanced-concepts).
 
-The source code to follow this article is in the `05-advanced-concepts` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2).
+The source code to follow this article is in the `05-advanced-concepts` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2).
 
 ## 06. Working with Svelte stores
 
@@ -68,7 +68,7 @@ In the last article we completed the development of our app, organized it into c
 
 You can see the complete content of this article [here](./06-stores/Svelte_stores.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores).
 
-The source code to follow this article is in the `06-stores` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/06-stores svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/d1fa84a5a4494366b179c87395940039?version=3.23.2).
+The source code to follow this article is in the `06-stores` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/06-stores svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/d1fa84a5a4494366b179c87395940039?version=3.23.2).
 
 ## 07. Deployment, TypeScript support and next Steps
 
@@ -78,6 +78,6 @@ Then we with provide a list of Svelte resources to go further with your Svelte l
 
 You can see the complete content of this article [here](./07-next-steps/Svelte_next_steps.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_next_steps).
 
-The source code to follow this article is in the `07-next-steps` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/07-next-steps svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3).
+The source code to follow this article is in the `07-next-steps` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/07-next-steps svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3).
 
-The application ported to TypeScript is in the `08-typescript-support` folder, you can download with the `npx degit opensas/mdn-svelte-tutorial/08-typescript-support svelte-todo` command.
+The application ported to TypeScript is in the `08-typescript-support` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/08-typescript-support svelte-todo` command.
