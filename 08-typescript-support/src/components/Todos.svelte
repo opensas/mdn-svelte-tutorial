@@ -10,7 +10,7 @@
 
   import type { TodoType } from '../types/todo.type'
 
-  import { Filter } from '../types/filter.interface';
+  import { Filter } from '../types/filter.enum'
 
   export let todos: TodoType[] = []
 
