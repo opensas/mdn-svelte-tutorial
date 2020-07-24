@@ -19,21 +19,18 @@
   let newTodoId: number
   $: newTodoId = todos.length > 0 ? Math.max(...todos.map(t => t.id)) + 1 : 1
 
-  function addTodo(e: CustomEvent<string>) {
-    const { detail: name } = e
+  function addTodo(name: string) {
     todos = [...todos, { id: newTodoId, name, completed: false }]
     $alert = `Todo '${name}' has been added`
   }
 
-  function removeTodo(e: CustomEvent<TodoType>) {
-    const { detail: todo } = e
+  function removeTodo(todo: TodoType) {
     todos = todos.filter(t => t.id !== todo.id)
     todosStatus.focus()             // give focus to status heading
     $alert = `Todo '${todo.name}' has been deleted`
   }
 
-  function updateTodo(e: CustomEvent<TodoType>) {
-    const { detail: todo } = e
+  function updateTodo(todo: TodoType) {
     const i = todos.findIndex(t => t.id === todo.id)
     if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
     if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
@@ -52,8 +49,7 @@
     else if (filter === Filter.COMPLETED)    $alert = 'Browsing completed todos'
   }
 
-  const checkAllTodos = (e: CustomEvent<boolean>) => {
-    const { detail: completed } = e
+  const checkAllTodos = (completed: boolean) => {
     todos = todos.map(t => ({...t, completed}))
     $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} todos`
   }
@@ -67,7 +63,7 @@
 <div class="todoapp stack-large">
 
   <!-- NewTodo -->
-  <NewTodo autofocus on:addTodo={addTodo} />
+  <NewTodo autofocus on:addTodo={ e => addTodo(e.detail)} />
 
   <!-- Filter -->
   <FilterButton bind:filter />
@@ -80,8 +76,8 @@
   {#each filterTodos(filter, todos) as todo (todo.id)}
     <li class="todo">
       <Todo {todo}
-        on:update={updateTodo}
-        on:remove={removeTodo}
+        on:update={ e => updateTodo(e.detail) }
+        on:remove={ e => removeTodo(e.detail) }
       />
     </li>
   {:else}
@@ -91,9 +87,10 @@
 
   <hr />
 
+  <!-- on:checkAll={checkAllTodos} -->
   <!-- MoreActions -->
   <MoreActions {todos}
-    on:checkAll={checkAllTodos}
+    on:checkAll={e => checkAllTodos(e.detail)}
     on:removeCompleted={removeCompletedTodos}
   />
 
