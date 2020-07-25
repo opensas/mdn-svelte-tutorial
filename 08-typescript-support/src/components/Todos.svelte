@@ -8,9 +8,9 @@
   import type { TodosStatusType } from './TodosStatus.svelte'
   import { alert } from '../stores'
 
-  import type { TodoType } from '../types/todo.type'
-
   import { Filter } from '../types/filter.enum'
+  
+  import type { TodoType } from '../types/todo.type'
 
   export let todos: TodoType[] = []
 
@@ -63,7 +63,7 @@
 <div class="todoapp stack-large">
 
   <!-- NewTodo -->
-  <NewTodo autofocus on:addTodo={ e => addTodo(e.detail)} />
+  <NewTodo autofocus on:addTodo={e => addTodo(e.detail)} />
 
   <!-- Filter -->
   <FilterButton bind:filter />
@@ -76,8 +76,8 @@
   {#each filterTodos(filter, todos) as todo (todo.id)}
     <li class="todo">
       <Todo {todo}
-        on:update={ e => updateTodo(e.detail) }
-        on:remove={ e => removeTodo(e.detail) }
+        on:update={e => updateTodo(e.detail)}
+        on:remove={e => removeTodo(e.detail)}
       />
     </li>
   {:else}
@@ -87,7 +87,6 @@
 
   <hr />
 
-  <!-- on:checkAll={checkAllTodos} -->
   <!-- MoreActions -->
   <MoreActions {todos}
     on:checkAll={e => checkAllTodos(e.detail)}

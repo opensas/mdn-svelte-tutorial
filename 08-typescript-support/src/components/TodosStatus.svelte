@@ -4,7 +4,7 @@
 </script>
 
 <script lang='ts'>
-  import type { TodoType } from "../types/todo.type";
+  import type { TodoType } from "../types/todo.type"
 
   export let todos: TodoType[]
 
