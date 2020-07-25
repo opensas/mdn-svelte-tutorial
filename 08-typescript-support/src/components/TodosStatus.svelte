@@ -8,15 +8,13 @@
 
   export let todos: TodoType[]
 
-  import type { HTMLControl } from "../types/html-control.type";
-
   let totalTodos: number
   let completedTodos: number
 
   $: totalTodos = todos.length
   $: completedTodos = todos.filter(todo => todo.completed).length
 
-  let headingEl: HTMLControl
+  let headingEl: HTMLElement
 
   export const focus = () => headingEl.focus()
 

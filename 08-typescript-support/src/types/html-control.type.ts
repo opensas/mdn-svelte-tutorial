@@ -1,1 +1,0 @@
-export type HTMLControl = Node & { focus?(): void }

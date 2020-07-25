@@ -9,8 +9,6 @@
 
   export let todo: TodoType
 
-  import type { HTMLControl } from '../types/html-control.type';
-
   let editing = false                     // track editing mode
   let editButtonPressed = false           // track if edit button has been pressed, to give focus to it after cancel or save
 
@@ -44,9 +42,9 @@
     update({ completed: !todo.completed}) // updates todo status
   }
 
-  const focusOnInit = (node: HTMLControl) => { node && typeof node.focus === 'function' && node.focus(); return {} }
+  const focusOnInit = (node: HTMLElement) => { node && typeof node.focus === 'function' && node.focus(); return {} }
 
-  const focusEditButton = (node: HTMLControl) => { editButtonPressed && node.focus(); return {} }
+  const focusEditButton = (node: HTMLElement) => { editButtonPressed && node.focus(); return {} }
 
 </script>
 
