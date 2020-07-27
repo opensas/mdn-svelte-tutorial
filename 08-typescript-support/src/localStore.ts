@@ -1,7 +1,7 @@
 // localStore.ts
 import { writable } from 'svelte/store'
 
-import { JsonValue } from './types/json.type'
+import type { JsonValue } from './types/json.type'
 
 export const localStore = (key: string, initial: JsonValue) => {                 // receives the key of the local storage and an initial value
 
