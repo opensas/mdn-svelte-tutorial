@@ -1,8 +1,4 @@
 <!-- components/TodosStatus.svelte -->
-<script context='module' lang='ts'>
-  export type TodosStatusType =  SvelteComponent & { focus(): void }
-</script>
-
 <script lang='ts'>
   import type { TodoType } from "../types/todo.type"
 
@@ -20,4 +16,4 @@
 
 </script>
 
-<h2 id="list-heading" bind:this={headingEl} tabindex="-1">{completedTodos} out of {totalTodos} items completed</h2>
+<h2 id="list-heading" bind:this={headingEl} tabindex={-1}>{completedTodos} out of {totalTodos} items completed</h2>

@@ -5,7 +5,6 @@
   import MoreActions from './MoreActions.svelte'
   import NewTodo from './NewTodo.svelte'
   import TodosStatus from './TodosStatus.svelte'
-  import type { TodosStatusType } from './TodosStatus.svelte'
   import { alert } from '../stores'
 
   import { Filter } from '../types/filter.enum'
@@ -14,7 +13,7 @@
 
   export let todos: TodoType[] = []
 
-  let todosStatus: TodosStatusType                   // reference to TodosStatus instance
+  let todosStatus: TodosStatus                   // reference to TodosStatus instance
 
   let newTodoId: number
   $: newTodoId = todos.length > 0 ? Math.max(...todos.map(t => t.id)) + 1 : 1
