@@ -1,5 +1,5 @@
 <!-- components/Alert.svelte -->
-<script lang="ts">
+<script lang='ts'>
   import { onDestroy } from 'svelte'
   import { alert } from '../stores'
   import { fly } from 'svelte/transition'

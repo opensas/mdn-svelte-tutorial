@@ -8,14 +8,13 @@
   import { alert } from '../stores'
 
   import { Filter } from '../types/filter.enum'
-  
+
   import type { TodoType } from '../types/todo.type'
 
   export let todos: TodoType[] = []
 
   let todosStatus: TodosStatus                   // reference to TodosStatus instance
 
-  let newTodoId: number
   $: newTodoId = todos.length > 0 ? Math.max(...todos.map(t => t.id)) + 1 : 1
 
   function addTodo(name: string) {
@@ -56,8 +55,8 @@
     $alert = `Removed ${todos.filter(t => t.completed).length} todos`
     todos = todos.filter(t => !t.completed)
   }
-
 </script>
+
 
 <div class="todoapp stack-large">
 

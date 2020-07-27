@@ -1,5 +1,5 @@
 <!-- components/MoreActions.svelte -->
-<script lang="ts">
+<script lang='ts'>
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
@@ -16,8 +16,7 @@
 
   const removeCompleted = () => dispatch('removeCompleted')
 
-  let completedTodos: number
-  $: completedTodos = todos.filter((t: TodoType) => t.completed).length
+  $: completedTodos = todos.filter(t => t.completed).length
 </script>
 
 <div class="btn-group">

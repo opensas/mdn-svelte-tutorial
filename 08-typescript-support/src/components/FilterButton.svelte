@@ -1,6 +1,5 @@
 <!-- components/FilterButton.svelte -->
-<script lang="ts">
-
+<script lang='ts'>
   import { Filter } from '../types/filter.enum'
 
   export let filter: Filter = Filter.ALL

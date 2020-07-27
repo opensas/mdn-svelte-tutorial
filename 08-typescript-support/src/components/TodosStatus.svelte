@@ -4,9 +4,6 @@
 
   export let todos: TodoType[]
 
-  let totalTodos: number
-  let completedTodos: number
-
   $: totalTodos = todos.length
   $: completedTodos = todos.filter(todo => todo.completed).length
 

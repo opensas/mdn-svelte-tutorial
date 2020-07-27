@@ -1,5 +1,5 @@
 <!-- components/Todo.svelte -->
-<script lang="ts">
+<script lang='ts'>
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 

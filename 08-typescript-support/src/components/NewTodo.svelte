@@ -1,5 +1,5 @@
 <!-- components/NewTodo.svelte -->
-<script lang="ts">
+<script lang='ts'>
   import { createEventDispatcher, onMount } from 'svelte'
   const dispatch = createEventDispatcher()
 
