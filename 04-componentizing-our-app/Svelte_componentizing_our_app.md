@@ -90,7 +90,11 @@ One way to let child components notify its parent of any change, is to pass a ha
 
 In our case, our `FilterButton` component will receive an `onclick` handler from its parent. Whenever the user clicks on any filter button the child will call the `onclick` handler passing the selected filter as a parameter.
 
-We will just declare the `onclick` prop assigning a dummy handler to prevent errors, like this: `export let onclick = (clicked) => {}`.
+We will just declare the `onclick` prop assigning a dummy handler to prevent errors, like this: 
+
+```javascript
+export let onclick = (clicked) => {}
+```
 
 And we'll declare the following reactive statement `$: onclick(filter)` to call the `onclick` handler whenever the `filter` variable is updated.
 
