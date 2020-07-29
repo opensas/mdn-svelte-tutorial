@@ -8,7 +8,7 @@
   export let autofocus = false
 
   let name = ''
-  let nameEl: HTMLElement                  // reference to the name input DOM node
+  let nameEl: HTMLElement     // reference to the name input DOM node
 
   const addTodo = () => {
     dispatch('addTodo', name)

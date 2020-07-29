@@ -616,4 +616,4 @@ Then we saw how to implement our own store from scratch, and also how to extend 
 
 At the end, we also had a look at using the Svelte `transition` directive to implement animations on DOM elements.
 
-In the next article we will learn how to compile and deploy our app to production. We will also see which resources are available on line to keep learning Svelte.
+In the next article we will learn how add TypeScript support to our Svelte application. To take advantage of all its features, we will also port our entire application to TypeScript.

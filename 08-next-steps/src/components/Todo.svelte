@@ -42,9 +42,9 @@
     update({ completed: !todo.completed}) // updates todo status
   }
 
-  const focusOnInit = (node: HTMLElement) => { node && typeof node.focus === 'function' && node.focus(); return {} }
+  const focusOnInit = (node: HTMLElement) => node && typeof node.focus === 'function' && node.focus()
 
-  const focusEditButton = (node: HTMLElement) => { editButtonPressed && node.focus(); return {} }
+  const focusEditButton = (node: HTMLElement) => editButtonPressed && node.focus()
 
 </script>
 

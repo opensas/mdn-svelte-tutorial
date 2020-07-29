@@ -57,7 +57,6 @@
   }
 </script>
 
-
 <div class="todoapp stack-large">
 
   <!-- NewTodo -->
