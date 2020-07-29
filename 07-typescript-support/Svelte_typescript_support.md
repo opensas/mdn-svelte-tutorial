@@ -80,49 +80,28 @@ $ npm run dev
 
 To add TypeScript support to an existing Svelte project you can follow [these instructions](https://svelte.dev/blog/svelte-and-typescript#Adding_TypeScript_to_an_existing_project). Alternatively, you can download the [setupTypeScript.js](https://github.com/sveltejs/template/blob/master/scripts/setupTypeScript.js) file to a `scripts` folder inside your project's root folder, and then run `node scripts/setupTypeScript.js`. You can even use `degit` to download the script. 
 
-For example these are the instructions to download a test version of the todo app and add TypeScript support:
+That's what we will do to start porting our application to TypeScript.
 
-```shell
-$ npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript
-
-$ cd svelte-todo-typescript/
-
-$ npx degit sveltejs/template/scripts scripts     # download script file
-
-$ node scripts/setupTypeScript.js                 # run it
-Converted to TypeScript.
-
-$ npm install                                     # download new dependencies
-
-$ npm run dev                                     # start the app in development mode
-```
-
-> Note: if you find any trouble working with TypeScript from a Svelte application, have a look at this [troubleshooting/FAQ section](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq) about TypeScript support. 
-
-## Porting our To-do list application to TypeScript
-
-As we've just seen, to convert a project to support TypeScript (either your own project, or the test project mentioned above) we can use `degit` to download the [setupTypeScript.js](https://github.com/sveltejs/template/blob/master/scripts/setupTypeScript.js) to the `scripts` directory and run it.
-
-Following these steps we'll add TypeScript support to our app. These instructions apply to any Svelte project you'd like to convert to TypeScript.
+> Remember that you can run `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript` to get the complete to-do list application in JavaScript to start porting it to TypeScript.
 
 Go to the root directory of the project and type:
 
 ```shell
-$ npx degit sveltejs/template/scripts scripts
+$ npx degit sveltejs/template/scripts scripts       # download script file to a scripts folder
 
-$ node scripts/setupTypeScript.js
+$ node scripts/setupTypeScript.js                   # run it
 Converted to TypeScript.
 
 You will need to re-run your dependency manager to get started.
+
+$ npm install                                       # download new dependencies
+
+$ npm run dev                                       # start the app in development mode
 ```
 
-Now you need to install the new dependencies this has added, and start the project like you'd usually do:
+These instructions apply to any Svelte project you'd like to convert to TypeScript. Just take into account that Svelte community is constantly improving Svelte TypeScript suppport, so you should run `npm update` to take advantage of the latest changes.
 
-```
-$ npm install
-
-$ npm run dev
-```
+> Note: if you find any trouble working with TypeScript from a Svelte application, have a look at this [troubleshooting/FAQ section](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq) about TypeScript support. 
 
 As we said before, TypeScript is a superset of JavaScript, so your application will run without modifications. In this case you will be running a regular JavaScript application with TypeScript support enabled, but without taking advantage of any of the features that TypeScript provides. You can now start adding types progressively.
 
@@ -136,7 +115,9 @@ TypeScript provides code editors and IDE with lots of information to to let them
 
 We'll use [Visual Studio Code](https://code.visualstudio.com/) to do a quick test and see how we can get autocompletion hints and type-checking as we're writing components. 
 
-> Note: there is work in progress to support TypeScript in Svelte projects in several code editors; the most complete support so far is available in the [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) extension, which is developed and maintained by the Svelte team. This extension will offer type checking, inspecting, refactoring, intellisense, hover-information, auto-completion, and other features. This kind of developer assistance is another good reason to start using TypeScript in your projects.
+There is work in progress to support TypeScript in Svelte projects in several code editors; the most complete support so far is available in the [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) extension, which is developed and maintained by the Svelte team. This extension will offer type checking, inspecting, refactoring, intellisense, hover-information, auto-completion, and other features. This kind of developer assistance is another good reason to start using TypeScript in your projects.
+
+> Make sure you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) and NOT the old "Svelte" by James Birtles, which has been discontinued. In case you have it installed, you should uninstall it and install the [official Svelte plugin](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
 From the root of your project's folder, type `code .` (the trailing dot tells VS code to open the current folder) to open the code editor. VS Code will tell you that there are recommended extensions to install.
 
