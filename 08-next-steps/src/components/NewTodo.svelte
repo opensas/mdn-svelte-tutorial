@@ -5,7 +5,7 @@
 
   import { selectOnFocus } from '../actions'
 
-  export let autofocus = false
+  export let autofocus: boolean = false
 
   let name = ''
   let nameEl: HTMLElement     // reference to the name input DOM node
