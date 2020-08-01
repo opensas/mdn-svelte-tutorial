@@ -477,7 +477,7 @@ We will also specify the headingEl, which we used to bind to the `heading` tag, 
 
 Finally, you'll notice that vscode is reporting an error in the `h2` tag when we set the `tabindex` attribute. That's because TypeScript is type-checking the `h2` tag and expects tabindex to be of type number.
 
-![VS Code TypeScript error: tabindex should be a number](./images/08-vscode-tabindex-hint.png)
+![VS Code TypeScript error: tabindex should be a number](./images/10-vscode-tabindex-hint.png)
 
 To fix it we replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
@@ -571,6 +571,8 @@ And that's it, we finished porting all our components. The only thing left is po
 
 Now we have to migrate the `stores.js` and `localStore.js` files to TypeScript.
 
+> Tip: the script `npm run validate`, which uses the [svelte-check](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check the `.svelte` files on our application. If you want to also check the `.ts` files you can run `npm run validate && npx tsc --noemit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your json file that runs that command.
+
 We'll start with `stores.js`. Rename the file to `stores.ts`, and set the type of our initialTodos array to `TodoType[]`, this is how it will end up:
 
 ```typescript
@@ -651,7 +653,7 @@ Now if we try to create a `localStore` with something that cannot be converted t
 
 ![vscode complains about invalid store content](./images/11-vscode-invalid-store.png)
 
-And best of all, it will even work with the [reactive $store syntax](https://svelte.dev/docs#4_Prefix_stores_with_$_to_access_their_values). If we try to save an invalid value to our todos store using the $store syntax, like this:
+And best of all, it will even work with the [$store auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_$_to_access_their_values). If we try to save an invalid value to our todos store using the $store syntax, like this:
 
 ```html
 <!-- App.svelte -->
