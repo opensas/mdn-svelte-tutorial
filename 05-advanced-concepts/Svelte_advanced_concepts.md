@@ -118,7 +118,7 @@ foo.bar = 'baz'
 
 Svelte won't update references to `obj.foo.bar`, unless you follow it up with `obj = obj`. That's because Svelte can't track object references, so we have to explicitly tell that `obj` has changed by issuing an assignment. 
 
-> Tip: if `foo` is a top level variable, you can easily tell Svelte to update `obj` whenever `foo` is changed with the following reactive statement: `$: foo, obj - obj`. With this we are defining `foo` as a dependency, and whenever it changes Svelte will run `obj = obj`.
+> Tip: if `foo` is a top level variable, you can easily tell Svelte to update `obj` whenever `foo` is changed with the following reactive statement: `$: foo, obj = obj`. With this we are defining `foo` as a dependency, and whenever it changes Svelte will run `obj = obj`.
 
 In our `checkAllTodos()` function, when we run:
 
@@ -668,6 +668,12 @@ Replace the `h2` status heading inside Todos.svelte with the `TodosStatus` compo
 ```
 
 You can also do a bit of clean-up, removing the `totalTodos` and `completedTodos` variables from `Todos.svelte`
+
+You can also do a bit of clean-up, removing the `totalTodos` and `completedTodos` variables from `Todos.svelte`. Just remove the `$: totalTodos = ..`. and the `$: completedTodos = ...` lines, and also replace the reference to `totalTodos` when we calculare `newTodoId` with `todos.length`, like this:
+
+```javascript
+$: newTodoId = todos.length ? Math.max(...todos.map(t => t.id)) + 1 : 1
+```
 
 Everything works as expected — we just extracted the last piece of markup to its own component.
 
