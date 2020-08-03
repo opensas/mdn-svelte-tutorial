@@ -289,7 +289,7 @@ The [Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), b
 
 If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
 
-If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau's](https://twitter.com/lihautan) [Compile Svelte in your head](https://lihautan.com/compile-svelte-in-your-head-part-1/) blog posts. Here's [part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/) and [part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/)
+If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau's](https://twitter.com/lihautan) [Compile Svelte in your head](https://lihautan.com/compile-svelte-in-your-head-part-1/) blog posts. Here's [part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/) and [part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
 
 ## Fin
 
