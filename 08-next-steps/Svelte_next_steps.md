@@ -279,6 +279,8 @@ There are different ways to get support and interact with the Svelte community:
 
 ## Learning resources
 
+There's a complete course about Svelte and Sapper by [@Rich_Harris](https://twitter.com/Rich_Harris), Svelte's creator, available at [Frontend Masters](https://frontendmasters.com/courses/svelte/).
+
 Even though Svelte is a relatively young project there are lots of tutorials and [courses](https://www.udemy.com/topic/svelte-framework/?sort=popularity) available on the web, so it's difficult to make a recommendation. 
 
 Nevertheless, [Svelte.js - The Complete Guide](https://www.udemy.com/course/sveltejs-the-complete-guide/) by [Academind](https://academind.com/) is a very popular option with great ratings.
@@ -286,6 +288,8 @@ Nevertheless, [Svelte.js - The Complete Guide](https://www.udemy.com/course/svel
 The [Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), by [Flavio Copes](https://flaviocopes.com/), is also a useful reference for learning the main Svelte concepts.
 
 If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
+
+If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau's](https://twitter.com/lihautan) [Compile Svelte in your head](https://lihautan.com/compile-svelte-in-your-head-part-1/) blog posts. Here's [part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/) and [part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/)
 
 ## Fin
 
