@@ -484,7 +484,7 @@ Let's fix it.
 
 Open the file `TodosStatus.svelte` and add the `lang='ts'` attribute.
 
-Then import the `TodoType` and declare the `todos` prop as an array of `TodoType`. Replace the first line of the <script> section with the following:
+Then import the `TodoType` and declare the `todos` prop as an array of `TodoType`. Replace the first line of the `<script>` section with the following:
 
 ```html
 <script lang='ts'>
@@ -702,7 +702,7 @@ And best of all, it will even work with the [$store auto-subscription syntax](ht
   import { todos } from './stores'
 
   // this is invalid, the content cannot be converted to JSON using JSON.stringify
-  $todos = { handler: () => {} }    
+  $todos = { handler: () => {} }
 
 </script>
 ```
@@ -725,6 +725,162 @@ Error: Argument of type '{ handler: () => void; }' is not assignable to paramete
 ```
 
 This is another example of how specifying types can make our code more robust, and help us catch more bugs before they get into production.
+
+## Bulletproofing our stores with Generics
+
+Our stores have already been ported to TypeScript but we can do better. We don't want to store any kind of value, we know that the `alert` store should contain string messages, and the `todos` store should contain an array of `TodoType`. We can let TypeScript enforce it. In order to do that we'll have to talk a little bit about [TypeScript Generics](https://www.typescriptlang.org/docs/handbook/generics.html).
+
+### Understanding TypeScript generics
+
+Generics allows to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes and functions. Generic types are passed as parameters using a special syntax: they are specified between angle-brackets, and by convention are denoted with and upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used latter.
+
+Let's see a quick example. We'll implement a simple `Stack` class, which will let us `push` and `pop` elements, like this:
+
+```typescript
+export class Stack {
+  private elements = []
+
+  push = (element) => this.elements.push(element)
+
+  pop() {
+    if (this.elements.length === 0) throw new Error('The stack is empty!')
+    return this.elements.pop()
+  }
+}
+```
+
+In this case `elements` is an array of type `any`, and accordingly the `push()` and `pop()` methods receives and returns a variable of type `any` respectively. So it's perfectly valid to do something like the following:
+
+```typescript
+  const anyStack = new Stack()
+
+  anyStack.push(1)
+  anyStack.push('hello')
+```
+
+But what if we wanted to have a `Stack` that would only work with `strings`? We could do the following:
+
+```typescript
+export class StringStack {
+  private elements: string[] = []
+
+  push = (element: string) => this.elements.push(element)
+
+  pop(): string {
+    if (this.elements.length === 0) throw new Error('The stack is empty!')
+    return this.elements.pop()
+  }
+}
+```
+
+That would work. But if we wanted to work with numbers we would have to duplicate our code and create a `NumberStack` class. And how could we handle a stack of types we don't know yet, and that should be defined by the consumer? 
+
+To solve all these problems we can use generics.
+
+This is our `Stack` class using generics:
+
+```typescript
+export class Stack<T> {
+  private elements: T[] = []
+
+  push = (element: T): number => this.elements.push(element)
+
+  pop(): T {
+    if (this.elements.length === 0) throw new Error('The stack is empty!')
+    return this.elements.pop()
+  }
+}
+```
+
+We define a generic type `T` and then we use it like we would normally use a type. Now `elements` is an array of type `T`, and `push()` and `pop()` also receives and returns a variable of type `T`.
+
+This is how we would use our generic `Stack`:
+
+```typescript
+  const numberStack = new Stack<number>()
+  numberStack.push(1)
+```
+
+Now TypeScript knows that our stack can only accepts numbers, and will issue an error if we try to push anything else:
+
+![VS Code generic stack error](./images/12-vscode-generic-stack-error.png)
+
+TypeScript can also infer generic types by its usage. Generics also support default values and [constraints](https://www.typescriptlang.org/docs/handbook/generics.html#generic-constraints).
+
+Generics is a powerful feature that allows our code to abstract away from the specific types being used, making it more reusable and generic without giving up on type-safety. To learn more about it check the [TypeScript Introduction to Generics](https://www.typescriptlang.org/docs/handbook/generics.html).
+
+## Using Svelte stores with Generics
+
+Svelte stores support generics out of the box. And, because of generic type inference we can take advantage of it without even touching our code.
+
+If you open the file `Todos.svelte` and assign a number to our `$alert` store, you'll get the following error:
+
+![VS Code generic alert error](./images/13-vscode-generic-alert-error.png)
+
+That's because when we defined our `alert` store in the `stores.ts` file with:
+
+```typescript
+export const alert = writable('Welcome to the To-Do list app!')
+```
+
+TypeScript inferred the generic type to be of type `string`. If we want to be explicit about we can do like this:
+
+```typescript
+export const alert = writable<string>('Welcome to the To-Do list app!')
+```
+
+Now we have to make our `localStore` store support generics. Remember that we defined the `JsonValue` type to prevent the usage of our `localStore` store with values that cannot be persisted using `JSON.stringify()`. Now we want the consumers of `localStore` to be able to specify the type of data to persist, but instead of working with any type they should comply with the `JsonValue` type. We'll specify that with a [Generic constraint](https://www.typescriptlang.org/docs/handbook/generics.html#generic-constraints), like this:
+
+```typescript
+export const localStore = <T extends JsonValue>(key: string, initial: T)
+```
+
+We define a generic type `T` and we specify that it must be compatible with the `JsonValue` type. Then we'll use the the `T` type appropriately. Our `localStore.ts` file will end up like this:
+
+```typescript
+// localStore.ts
+import { writable } from 'svelte/store'
+
+import type { JsonValue } from './types/json.type'
+
+export const localStore = <T extends JsonValue>(key: string, initial: T) => {          // receives the key of the local storage and an initial value
+
+  const toString = (value: T) => JSON.stringify(value, null, 2)           // helper function
+  const toObj = JSON.parse                                                // helper function
+
+  if (localStorage.getItem(key) === null) {                               // item not present in local storage
+    localStorage.setItem(key, toString(initial))                          // initialize local storage with initial value
+  }
+
+  const saved = toObj(localStorage.getItem(key))                          // convert to object
+
+  const { subscribe, set, update } = writable<T>(saved)                   // create the underlying writable store
+
+  return {
+    subscribe,
+    set: (value: T) => {
+      localStorage.setItem(key, toString(value))                          // save also to local storage as a string
+      return set(value)
+    },
+    update
+  }
+}
+```
+
+And thanks to generic type inference, TypeScript already knows that our `$todos` store should contain an array of `TodoType`:
+
+![VS Code generic localStore error](./images/14-vscode-generic-localstore-error.png)
+
+Once again, if we want to be explicit about it, we can do so in the `stores.ts` file:
+
+```typescript
+const initialTodos: TodoType[] = [
+  { id: 1, name: 'Visit MDN web docs', completed: true },
+  { id: 2, name: 'Complete the Svelte Tutorial', completed: false },
+]
+
+export const todos = localStore<TodoType[]>('mdn-svelte-todo', initialTodos)
+```
 
 And that's it. With this last change we converted our whole application to TypeScript.
 
