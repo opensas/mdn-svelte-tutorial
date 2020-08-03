@@ -50,7 +50,7 @@ The source code to follow this article is in the `03-adding-dynamic-behavior` fo
 
 In the last article we started developing our Todo list app. Now it's time to go further and add more features to our app, but the central objective here is to look at how to break our app into manageable components and share information between them.
 
-You can see the complete content of this article [here](./04-componentizing-our-app/Svelte_componentizing_our_app.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_componentizing-our-app).
+You can see the complete content of this article [here](./04-componentizing-our-app/Svelte_componentizing_our_app.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components).
 
 The source code to follow this article is in the `04-componentizing-our-app` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2).
 
@@ -58,7 +58,7 @@ The source code to follow this article is in the `04-componentizing-our-app` fol
 
 In the last article we added more features to our To-Do list and started to organize our app into components. In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. Then we will focus on some accessibility issues involving focus management. Finally, we will see how components can also expose methods and variables to access them programmatically.
 
-You can see the complete content of this article [here](./05-advanced-concepts/Svelte_advanced_concepts.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_advanced-concepts).
+You can see the complete content of this article [here](./05-advanced-concepts/Svelte_advanced_concepts.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility).
 
 The source code to follow this article is in the `05-advanced-concepts` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2).
 
@@ -85,5 +85,7 @@ The application ported to TypeScript is in the `08-next-steps` folder, you can d
 ## 08. Deployment and next Steps
 
 In this article we will learn about a couple of zero-fuss options to deploy our app in production and see how to setup a basic pipeline to deploy our app to GitLab on every commit. We will also provide a list of Svelte resources to go further with your Svelte learning.
+
+You can see the complete content of this article [here](./08-next-steps/Svelte_next_steps.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_next_steps).
 
 The source code to follow this article is in the `08-next-steps` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/08-next-steps svelte-todo` command. 
