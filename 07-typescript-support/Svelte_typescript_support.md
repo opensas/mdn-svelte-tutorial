@@ -145,16 +145,15 @@ And if you pass something that is not a number it will complain about it:
 
 ![VS Code type checking in components](./images/06-vscode-type-checking-in-components.png)
 
-The application template has a `validate` script configured that runs [svelte-check](https://www.npmjs.com/package/svelte-check) against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run validate` to check for unused CSS, and return A11y hints and TypeScript compile errors.
+The application template has a `validate` script configured that runs [svelte-check](https://www.npmjs.com/package/svelte-check) against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run validate` in your terminal to check for unused CSS, and return A11y hints and TypeScript compile errors.
 
-In this case, if you run `npm run validate` on the console, you will get the following error :
+In this case, if you run `npm run validate` in the VS Code console, you will get the following error :
 
 ![vscode svelte-check from integrated terminal](./images/07-vscode-svelte-check.png)
 
-Even better, if you run it from the VS Code integrated terminal (you can open it with the Ctrl + ` keyboard shortcut), Cmd/Ctrl + clicking on the file name will take you to the line containing the error.
+Even better, when you run it from the VS Code integrated console (you can open it with the Ctrl + ` keyboard shortcut), Cmd/Ctrl + clicking on the file name will take you to the line containing the error.
 
-You can also run the `validate` script in watch mode with `npm run validate -- --watch`. In this case, the script will execute whenever you change any file.
-
+You can also run the `validate` script in watch mode with `npm run validate -- --watch`. In this case, the script will execute whenever you change any file. If you are using it from the terminal, a good idea is to have this running in a separate terminal of its own so it does not interfere with your other terminal usage.
 
 ## Creating a custom type
 
@@ -464,7 +463,7 @@ Update your `script` section to look like this:
 </script>
 ```
 
-### Todos.svelte and TodosStatus.svelte
+### Todo.svelte and TodosStatus.svelte
 
 We are encountering another issue when we are passing todos to the `TodosStatus.svelte` and `Todo.svelte` components:
 
