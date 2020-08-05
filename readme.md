@@ -34,7 +34,7 @@ The source code to follow this article is in the `01-getting-started` folder, yo
 
 In this section we will first have a look at the desired functionality of our app, then we'll create our `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in the next article. 
 
-You can see the complete content of this article [here](./02-starting-our-todo-app/Svelte_starting_our_todo_app.md) or at [MDN web docs](https://wiki.developer.mozilla.org/en-US/docs/https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning).
+You can see the complete content of this article [here](./02-starting-our-todo-app/Svelte_starting_our_todo_app.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning).
 
 The source code to follow this article is in the `02-starting-our-todo-app` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2).
 
@@ -74,7 +74,7 @@ The source code to follow this article is in the `06-stores` folder, you can dow
 
 In this article will learn how to use TypeScript to develop Svelte applications. First we'll learn what is TypeScript and what benefits it can bring us. Then we'll see how to configure our project to work with TypeScript files. Finally we will go over our app and see what modifications we have to make to fully take advantage of TypeScript features.
 
-You can see the complete content of this article [here](./07-typescript-support/Svelte_typescript_support.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_typescript_support).
+You can see the complete content of this article [here](./07-typescript-support/Svelte_typescript_support.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript).
 
 The source code to follow this article is in the `07-typescript-support` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo` command. 
 
