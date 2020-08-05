@@ -1,3 +1,16 @@
+# Source code for Svelte Tutorials at MDN Web docs
+
+Source code of the To-Do list app for the Svelte tutorials at [Understanding client-side JavaScript frameworks](Understanding client-side JavaScript frameworks) series at MDN Web docs.
+
+## 08. Deployment and next Steps
+
+In this article we will learn about a couple of zero-fuss options to deploy our app in production and see how to setup a basic pipeline to deploy our app to GitLab on every commit. We will also provide a list of Svelte resources to go further with your Svelte learning.
+
+You can see the complete content of this article [here](../08-next-steps/Svelte_next_steps.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next).
+
+The source code to follow this article is in the `08-next-steps` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/08-next-steps svelte-todo` command. 
+---
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
