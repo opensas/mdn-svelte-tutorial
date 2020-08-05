@@ -6,9 +6,9 @@ Source code of the To-Do list app for the Svelte tutorials at [Understanding cli
 
 In this article we'll provide a quick introduction to Svelte. We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run the project locally and build it for production.
 
-You can see the complete content of this article [here](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started).
+You can see the complete content of this article [here](../01-getting-started/Svelte_getting_started.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started).
 
-The source code is in the `01-getting-started` folder, you can also play with an online version this Svelte [REPL](https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2).
+The source code to follow this article is in the `01-getting-started` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/01-getting-started svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2).
 
 ---
 
