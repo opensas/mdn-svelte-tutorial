@@ -16,7 +16,9 @@ The outcome of this approach is not only smaller application bundles and better 
 
 Svelte sticks closely to the classic web development model of HTML, CSS, and JS, just adding a few extensions to HTML and JavaScript. It arguably has fewer concepts and tools to learn than some of the other framework options.
 
-It's main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities — and it doesn't support TypeScript yet (but there is a lot of work being done on the subject and experimental support is already available). But it's advantages should be enough to make you interested to explore it.
+It's main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But it's advantages should be enough to make you interested to explore it.
+
+> Recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested feature, and which we will cover later in this tutorial serie.
 
 We encourage you to go through the [Svelte tutorial](https://svelte.dev/tutorial/basics) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth. It should take you about 30 minutes to complete.
 
