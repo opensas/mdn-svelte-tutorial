@@ -1,9 +1,10 @@
 for d in */; do
-  echo "$d"
+  echo "entering $d"
   cd "$d"
   rm -fr node_modules/
   npm install
   npm outdated
-  npm update
+  # npm update
   cd ..
+  echo "----"
 done
